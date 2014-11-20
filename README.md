@@ -1,7 +1,7 @@
 docker-mosquitto
 ================
 
-![](http://dockeri.co/image/sanji/docker-mosquitto)
+[![](http://dockeri.co/image/sanji/docker-mosquitto)](https://registry.hub.docker.com/u/sanji/docker-mosquitto/)
 
 ```
                                                                        _    __    __        
