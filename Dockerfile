@@ -3,14 +3,16 @@ FROM debian:stable
 MAINTAINER Zack YL Shih <zackyl.shih@moxa.com>
 
 # Add mosquitto key and apt-get install
-RUN apt-get update && apt-get upgrade -y && apt-get install -y wget
+RUN apt-get update && apt-get install -y wget
 
 RUN wget -O - http://repo.mosquitto.org/debian/mosquitto-repo.gpg.key | \
-    apt-key add -
-RUN wget -O /etc/apt/sources.list.d/mosquitto-repo.list \
+    apt-key add - &&\
+    wget -O /etc/apt/sources.list.d/mosquitto-repo.list \
     http://repo.mosquitto.org/debian/mosquitto-repo.list
 
-RUN apt-get update && apt-get install -y mosquitto
+RUN apt-get update && \
+    apt-get install -y mosquitto && \
+    rm -rf /var/lib/apt/lists/*
 
 # Copy configs
 COPY config /mqtt/config

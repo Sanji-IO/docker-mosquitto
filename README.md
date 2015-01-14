@@ -11,3 +11,8 @@ docker-mosquitto
                   /_/ /_/ /_/ \____/ /____/  \__, /  \__,_/  /_/   \__/  \__/  \____/ 
                                                /_/                                    
 ```
+
+Build
+-----
+Build images for armhf arch:
+    $ ./build.sh armhf
