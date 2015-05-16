@@ -1,4 +1,4 @@
-FROM debian:stable
+FROM debian:wheezy
 
 MAINTAINER Zack YL Shih <zackyl.shih@moxa.com>
 
@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y wget
 RUN wget -O - http://repo.mosquitto.org/debian/mosquitto-repo.gpg.key | \
     apt-key add - &&\
     wget -O /etc/apt/sources.list.d/mosquitto-repo.list \
-    http://repo.mosquitto.org/debian/mosquitto-repo.list
+    http://repo.mosquitto.org/debian/mosquitto-wheezy.list
 
 RUN apt-get update && \
     apt-get install -y mosquitto && \
